@@ -269,10 +269,28 @@ public class pizzaGUI extends javax.swing.JFrame {
     boolean vanPizzaValasztva = cmbPizzafelek.getSelectedIndex() > 0;
     String uzenet;
     String meret;
-    if (vanPizzaValasztva) {
+    String feltet;
+    String feltetDarab = null;
+    String feltet2;
+    String feltetDarab2 = null;
+    if (cbxSajt.isSelected()){
+        feltet = cbxSajt.getText();
+        feltetDarab = spnSajt.getValue().toString() + "db";
+    }else {
+        feltet = "";
+        feltetDarab = "";
+    }
+    if (cbxJapanejo.isSelected()){
+        feltet2 = cbxJapanejo.getText();
+        feltetDarab = spnJalapenjo.getValue().toString() + "db";
+    }else {
+        feltet = "";
+        feltetDarab = "";
+    }
+    if (vanPizzaValasztva){
         uzenet = cmbPizzafelek.getSelectedItem().toString();
         meret = cmbMeret.getSelectedItem().toString();
-        JOptionPane.showMessageDialog(rootPane, "A rendelés kész!\n"+uzenet+"\n"+ meret+ " cm", "Rendelés", 1);
+        JOptionPane.showMessageDialog(rootPane, "A rendelés kész!\n"+uzenet+"\n"+ meret+ " cm" + "\n"+ feltet + " " + feltetDarab, "Rendelés", 1);
         System.exit(0);
     } else {
         uzenet = "Nincs pizza választva";
