@@ -272,7 +272,7 @@ public class pizzaGUI extends javax.swing.JFrame {
     if (vanPizzaValasztva) {
         uzenet = cmbPizzafelek.getSelectedItem().toString();
         meret = cmbMeret.getSelectedItem().toString();
-        JOptionPane.showMessageDialog(rootPane, "A rendelés kész!\n"+uzenet+"\n"+ meret+ " cm" + "\n1500 ft", "Rendelés", 1);
+        JOptionPane.showMessageDialog(rootPane, "A rendelés kész!\n"+uzenet+"\n"+ meret+ " cm", "Rendelés", 1);
         System.exit(0);
     } else {
         uzenet = "Nincs pizza választva";
