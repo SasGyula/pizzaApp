@@ -271,18 +271,9 @@ public class pizzaGUI extends javax.swing.JFrame {
     String meret;
     String feltet;
     String feltetDarab = null;
-    String feltet2;
-    String feltetDarab2 = null;
     if (cbxSajt.isSelected()){
         feltet = cbxSajt.getText();
         feltetDarab = spnSajt.getValue().toString() + "db";
-    }else {
-        feltet = "";
-        feltetDarab = "";
-    }
-    if (cbxJapanejo.isSelected()){
-        feltet2 = cbxJapanejo.getText();
-        feltetDarab = spnJalapenjo.getValue().toString() + "db";
     }else {
         feltet = "";
         feltetDarab = "";
